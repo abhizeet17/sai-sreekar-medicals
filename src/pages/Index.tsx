@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,6 +21,10 @@ const Index = () => {
 
   const handleWhatsApp = () => {
     window.open('https://wa.me/919490894601?text=Hello, I would like to inquire about medicines.', '_blank');
+  };
+
+  const handleGoogleMaps = () => {
+    window.open('https://maps.app.goo.gl/ZkqM6tuKByBBhLbY6', '_blank');
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,7 +83,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-teal-600/5"></div>
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
-            <Badge className="mb-8 bg-gradient-to-r from-primary/10 to-teal-600/10 text-primary border-primary/20 hover:bg-primary/20 px-6 py-2 text-sm font-semibold shadow-sm">
+            <Badge className="mb-8 bg-white/90 backdrop-blur-sm text-primary border-2 border-primary/30 hover:bg-white hover:border-primary/50 px-8 py-3 text-base font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               ⭐ Your Trusted Healthcare Partner Since 2020
             </Badge>
             <h1 className="text-6xl md:text-7xl font-bold text-gray-800 mb-8 leading-tight">
@@ -177,7 +180,7 @@ const Index = () => {
             <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-gray-50 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-teal-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-10 h-10 text-primary" />
+                  Shield className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">Quality Assured</h3>
                 <p className="text-gray-600 leading-relaxed">All medicines are sourced from licensed distributors, stored in optimal conditions, and checked for authenticity before delivery.</p>
@@ -341,12 +344,16 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-3 text-gray-800">Visit Our Store</h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-4">
                     Gorantla Main Road<br />
                     Opposite Police Station<br />
                     Gorantla, Andhra Pradesh
                   </p>
-                  <p className="text-sm text-gray-500 mt-2">Open 24/7 for emergencies</p>
+                  <p className="text-sm text-gray-500 mb-3">Open 24/7 for emergencies</p>
+                  <Button variant="link" onClick={handleGoogleMaps} className="p-0 h-auto text-primary hover:text-primary/80 font-semibold">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    View on Google Maps
+                  </Button>
                 </div>
               </div>
 
