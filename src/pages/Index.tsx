@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -55,9 +54,20 @@ const Index = () => {
     }, 1500);
   };
 
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // FormSubmit.io will handle the actual submission
+    // Validate name
+    if (!contactForm.name.trim()) {
+      toast.error("Please enter your name.");
+      return;
+    }
+    // Validate email using regex
+    if (!emailRegex.test(contactForm.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
     toast.success("Message sent successfully! We'll get back to you soon.");
     setContactForm({ name: '', email: '', message: '' });
   };
@@ -488,17 +498,23 @@ const Index = () => {
             <Card className="border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
               <CardContent className="p-6 sm:p-10">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-800">Send us a Message</h3>
-                <form action="https://formsubmit.co/ajax/saisreekarmedicals@gmail.com" method="POST" onSubmit={handleContactSubmit} className="space-y-4 sm:space-y-6">
+                <form
+                  action="https://formsubmit.co/ajax/saisreekarmedicals@gmail.com"
+                  method="POST"
+                  onSubmit={handleContactSubmit}
+                  className="space-y-4 sm:space-y-6"
+                >
                   <input type="hidden" name="_subject" value="New contact from Sai Sreekar Medicals website" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
-                  
+
                   <Input
                     name="name"
                     placeholder="Your Full Name"
                     value={contactForm.name}
-                    onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                     required
+                    minLength={2}
                     className="border-2 border-gray-200 focus:border-primary rounded-xl py-3 sm:py-4 px-4 sm:px-6 text-base sm:text-lg transition-all duration-300"
                   />
                   <Input
@@ -506,20 +522,26 @@ const Index = () => {
                     name="email"
                     placeholder="Your Email Address"
                     value={contactForm.email}
-                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                     required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    title="Please enter a valid email address"
                     className="border-2 border-gray-200 focus:border-primary rounded-xl py-3 sm:py-4 px-4 sm:px-6 text-base sm:text-lg transition-all duration-300"
                   />
                   <Textarea
                     name="message"
                     placeholder="How can we help you today?"
                     value={contactForm.message}
-                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                    required
+                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                    // message is NOT required
                     className="border-2 border-gray-200 focus:border-primary rounded-xl py-3 sm:py-4 px-4 sm:px-6 text-base sm:text-lg min-h-[120px] sm:min-h-[150px] transition-all duration-300"
                   />
-                  <input type="file" name="attachment" accept="image/*,.pdf" className="border-2 border-gray-200 focus:border-primary rounded-xl py-3 sm:py-4 px-4 sm:px-6 text-base sm:text-lg transition-all duration-300 w-full" />
-                  <Button type="submit" className="w-full bg-gradient-to-r from-primary to-teal-600 hover:from-primary/90 hover:to-teal-600/90 text-base sm:text-lg py-3 sm:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-primary to-teal-600 hover:from-primary/90 hover:to-teal-600/90 text-base sm:text-lg py-3 sm:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    disabled={!emailRegex.test(contactForm.email)}
+                  >
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                     Send Message
                   </Button>
