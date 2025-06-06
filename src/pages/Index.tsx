@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -180,7 +181,7 @@ const Index = () => {
             <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-white to-gray-50 hover:-translate-y-2">
               <CardContent className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-primary/10 to-teal-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  Shield className="w-10 h-10 text-primary" />
+                  <Shield className="w-10 h-10 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-800">Quality Assured</h3>
                 <p className="text-gray-600 leading-relaxed">All medicines are sourced from licensed distributors, stored in optimal conditions, and checked for authenticity before delivery.</p>
