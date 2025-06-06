@@ -539,7 +539,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Sai Sreekar Medicals. All rights reserved. | Licensed Medical Store</p>
+            <p className="text-gray-400">© 2025 Sai Sreekar Medicals. All rights reserved. | Licensed Medical Store</p>
           </div>
         </div>
       </footer>
