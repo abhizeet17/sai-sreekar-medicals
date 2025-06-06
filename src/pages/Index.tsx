@@ -499,7 +499,7 @@ const Index = () => {
               <CardContent className="p-6 sm:p-10">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-800">Send us a Message</h3>
                 <form
-                  action="https://formsubmit.co/saisreekarmedicals@gmail.com"
+                  action="https://formsubmit.co/ajax/saisreekarmedicals@gmail.com"
                   method="POST"
                   className="space-y-4 sm:space-y-6"
                 >
