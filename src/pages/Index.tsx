@@ -25,7 +25,7 @@ const Index = () => {
   };
 
   const handleWhatsAppPrescription = () => {
-    window.open('https://wa.me/919490894601?text=Hello, I have uploaded my prescription. Please check and let me know about availability and pricing.', '_blank');
+    window.open('https://wa.me/919490894601?text=Hello, I have a prescription. Please check and let me know the availability and pricing.', '_blank');
   };
 
   const handleGoogleMaps = () => {
