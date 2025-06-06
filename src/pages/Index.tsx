@@ -488,7 +488,7 @@ const Index = () => {
             <Card className="border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
               <CardContent className="p-6 sm:p-10">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-800">Send us a Message</h3>
-                <form action="https://formsubmit.co/saisreekarmedicals@gmail.com" method="POST" onSubmit={handleContactSubmit} className="space-y-4 sm:space-y-6">
+                <form action="https://formsubmit.co/ajax/saisreekarmedicals@gmail.com" method="POST" onSubmit={handleContactSubmit} className="space-y-4 sm:space-y-6">
                   <input type="hidden" name="_subject" value="New contact from Sai Sreekar Medicals website" />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
