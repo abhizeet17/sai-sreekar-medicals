@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -85,7 +84,7 @@ const Index = () => {
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <Badge className="mb-8 bg-white/90 backdrop-blur-sm text-primary border-2 border-primary/30 hover:bg-white hover:border-primary/50 px-8 py-3 text-base font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              ⭐ Your Trusted Healthcare Partner Since 2020
+              ⭐ Your Trusted Healthcare Partner Since 2001
             </Badge>
             <h1 className="text-6xl md:text-7xl font-bold text-gray-800 mb-8 leading-tight">
               Quality Medicines,
@@ -162,6 +161,96 @@ const Index = () => {
                 <p className="text-sm text-gray-600">Expert guidance</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legacy Story Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 via-white to-teal-50/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Our Legacy</Badge>
+            <h2 className="text-5xl font-bold text-gray-800 mb-6">23+ Years of Healthcare Excellence</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              From a small neighborhood pharmacy to Gorantla's most trusted healthcare destination, our journey has been one of unwavering commitment to your health and wellbeing.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="space-y-8">
+              <div className="relative">
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-teal-600"></div>
+                <div className="space-y-12 pl-12">
+                  <div className="relative">
+                    <div className="absolute -left-10 w-8 h-8 bg-gradient-to-br from-primary to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">2001 - The Beginning</h3>
+                      <p className="text-gray-600">Started as a small family pharmacy with a vision to serve the Gorantla community with genuine medicines and personalized care.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute -left-10 w-8 h-8 bg-gradient-to-br from-primary to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-600">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">2010 - Expanding Services</h3>
+                      <p className="text-gray-600">Introduced home delivery services and expanded our medicine inventory to include specialized treatments and health supplements.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute -left-10 w-8 h-8 bg-gradient-to-br from-primary to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">2020 - Digital Transformation</h3>
+                      <p className="text-gray-600">Embraced technology with online prescription uploads, WhatsApp ordering, and 24/7 emergency services during the pandemic.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute -left-10 w-8 h-8 bg-gradient-to-br from-primary to-teal-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-teal-600">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">2024 - Community Pillar</h3>
+                      <p className="text-gray-600">Today, we proudly serve over 5000+ families, maintaining the same values of trust, quality, and care that started our journey.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Card className="p-10 border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
+              <CardContent className="text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Award className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold mb-6 text-gray-800">Legacy of Trust</h3>
+                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                  Over two decades of serving the Gorantla community has taught us that healthcare is not just about medicines - it's about building relationships, understanding needs, and being there when you need us most.
+                </p>
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <div className="text-center p-4 bg-gradient-to-br from-primary/5 to-teal-600/5 rounded-xl">
+                    <div className="text-2xl font-bold text-primary mb-1">23+</div>
+                    <div className="text-sm text-gray-600">Years of Service</div>
+                  </div>
+                  <div className="text-center p-4 bg-gradient-to-br from-primary/5 to-teal-600/5 rounded-xl">
+                    <div className="text-2xl font-bold text-primary mb-1">3</div>
+                    <div className="text-sm text-gray-600">Generations Served</div>
+                  </div>
+                </div>
+                <div className="flex justify-center space-x-2 text-yellow-500 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-current" />
+                  ))}
+                </div>
+                <p className="text-sm text-gray-500">Trusted by generations of families in Gorantla</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -262,9 +351,9 @@ const Index = () => {
               </div>
             </div>
 
-            <Card className="p-10 border-0 shadow-2xl bg-gradient-to-br from-primary/5 to-teal-600/5">
+            <Card className="p-10 border-0 shadow-2xl bg-gradient-to-br from-white to-gray-50">
               <CardContent className="text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-float shadow-lg">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/10 to-teal-600/10 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-float shadow-lg">
                   <Truck className="w-12 h-12 text-white" />
                 </div>
                 <h4 className="text-3xl font-bold mb-6 text-gray-800">Free Home Delivery</h4>
